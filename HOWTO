@@ -1,0 +1,13 @@
+Below is a quit howto on setting up a tacacs+ server on Centos and testing it 
+with a remote cisco switch.
+
+# Install tac_plus with command below
+
+[root@server ~]#yum install tac_plus
+
+# All configuration is done from a single config file. Let’s take a look at its contents:
+[root@server /]# vim /etc/tac_plus.conf
+
+You will see a lot of things in this default configuration file. Let me walk you through some of the fields. The first thing you see is a key, we need to configure this on the TACACS+ server and on each network device that you want to control with the TACACS+ server.
+
+By default there is no key:
